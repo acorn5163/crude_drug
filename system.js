@@ -955,5 +955,12 @@ function updateAccuracy(percent) {
 }
 
 function Reset(){
-    location.reload();
+    document.getElementById('config').classList.remove('d-none');
+    document.getElementById('page_question').classList.add('d-none');
+    document.getElementById('result').classList.add('d-none');
+
+    Progress = 0;
+    number_of_correct=0;
+    // location.reload();
+
 }
