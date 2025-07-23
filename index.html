@@ -29,6 +29,8 @@
       <label class="btn btn-outline-primary" for = "syusi" onclick="ChangeRange('syusi')">種子</label><br>
       <input type="checkbox" class="btn-check" id="kawa" autocomplete="off" checked>
       <label class="btn btn-outline-primary" for = "kawa" onclick="ChangeRange('kawa')">皮</label><br>
+      <input type="checkbox" class="btn-check" id="other" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for = "other" onclick="ChangeRange('other')">その他</label><br>
     </div>
   </div>
 
@@ -145,8 +147,9 @@
     </div>
   </div>
   <div class="container mt-5">
-      <label for="answertextbox" class="form-label">答え</label>
+      <label for="answertextbox" class="form-label" id="textboxlabel">答え</label>
       <input type="text" id="answertextbox">
+      <button type="button" class="btn btn-primary" onclick="Step1()">回答</button>
   </div>
   <div class="container mt-5" id="Container_answer" class="d-none">
     <div class="row">

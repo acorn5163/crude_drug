@@ -1,6 +1,7 @@
-  var Range_of_question = {"ne":true,"konkei":true,"ha":true,"kawa":true,"kazitu":true,"syusi":true};
+  var Range_of_question = {"ne":true,"konkei":true,"ha":true,"kawa":true,"kazitu":true,"syusi":true,"other":true};
   var Hints = {"syouyakumei":true,"kigen":true,"sihyouseibun":true,"gakumei":true,"kamoku":true,"bui":true};
   var type_of_answer = "syouyakumei"
+  const ToA = {"syouyakumei":"生薬名","kigen":"基原","sihyouseibun":"指標成分","gakumei":"学名","kamoku":"科目","bui":"部位"};
   var number_of_Q = 10
   var bug = "hi"
   const data = {
@@ -841,6 +842,7 @@
     document.getElementById('page_question').classList.remove('d-none');
     document.getElementById('result').classList.add('d-none');
     document.getElementById('Container_answer').classList.add('d-none');
+    document.getElementById('textboxlabel').textContent = `答え(${ToA[type_of_answer]})`;
     Questions = MakeQuestion(number_of_Q);
     SetQuestion(Questions[0])
     Progress = 0;
