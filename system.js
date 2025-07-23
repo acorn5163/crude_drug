@@ -839,6 +839,7 @@
     document.getElementById('config').classList.add('d-none');
     document.getElementById('page_question').classList.remove('d-none');
     document.getElementById('result').classList.add('d-none');
+    document.getElementById('Container_answer').classList.add('d-none');
     Questions = MakeQuestion(number_of_Q);
     SetQuestion(Questions[0])
     Progress = 0;
@@ -846,14 +847,22 @@
     
   }
 
-function Step(){
+function Step1(){
     console.log("stepped");
     let submitted_answer = document.getElementById('answertextbox').value;
     if(submitted_answer == Questions[Progress]["Answer"]){
         number_of_correct += 1;
-        
+        document.getElementById("C_correction").textContent = "正解！";
     }
+    else{
+        document.getElementById("C_correction").textContent = "不正解...";
+    }
+    document.getElementById('Container_answer').classList.remove('d-none');
+}
+function Step2(){
+    document.getElementById('Container_answer').classList.add('d-none');
     Progress += 1;
+    document.getElementById('answertextbox').value = "";
     console.log(Progress);
     if(Progress < number_of_Q){
         SetQuestion(Questions[Progress]);
@@ -861,9 +870,7 @@ function Step(){
     else{
         FinishGame();
     }
-
 }
-
 function MakeList(){
   var Qlist = {}
   for(key in Range_of_question){
@@ -884,6 +891,7 @@ function SetQuestion(Qdata){
     document.getElementById("C_kamoku").textContent = Qdata["kamoku"];
     document.getElementById("C_bui").textContent = Qdata["bui"];
     document.getElementById("C_sihyouseibun").textContent = Qdata["sihyouseibun"];
+    document.getElementById("C_answer").textContent = Qdata["Answer"];
     console.log("Question is set.")
 }
 
@@ -927,7 +935,7 @@ function FinishGame(){
 function submit_event(e) {
   if (e.key === "Enter") {
     console.log('回答されました。');
-    Step()
+    Step1()
   }  
   return false;
 }
