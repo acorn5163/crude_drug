@@ -853,6 +853,7 @@
 function Step1(){
     console.log("stepped");
     let submitted_answer = document.getElementById('answertextbox').value;
+    document.getElementById('answercontainer').classList.add('d-none');
     if(submitted_answer == Questions[Progress]["Answer"]){
         number_of_correct += 1;
         document.getElementById("C_correction").textContent = "正解！";
@@ -869,6 +870,7 @@ function Step2(){
     console.log(Progress);
     if(Progress < number_of_Q){
         SetQuestion(Questions[Progress]);
+        document.getElementById('answercontainer').classList.remove('d-none');
     }
     else{
         FinishGame();
