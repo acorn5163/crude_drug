@@ -2,6 +2,7 @@
   var Hints = {"syouyakumei":true,"kigen":true,"sihyouseibun":true,"gakumei":true,"kamoku":true,"bui":true};
   var type_of_answer = "syouyakumei"
   var number_of_Q = 10
+  var bug = "hi"
   const data = {
   "kawa": {
     "オウバク": {
