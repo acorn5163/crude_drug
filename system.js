@@ -199,7 +199,7 @@
       "gakumei": "Asiasarum sieboldii",
       "kamoku": "ウマノスズグサ科",
       "bui": "根および根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "メチルオイゲノール"
     },
     "トコン": {
       "syouyakumei": "トコン",
@@ -230,8 +230,8 @@
       "kigen": "ショウガ",
       "gakumei": "Zingiber officinale",
       "kamoku": "ショウガ科",
-      "bui": "湯通しまたは蒸してから乾燥（カンキョウ）",
-      "sihyouseibun": "[6]-ショウガオール（カンキョウ）"
+      "bui": "湯通しまたは蒸してから乾燥した根",
+      "sihyouseibun": "[6]-ショウガオール"
     }
   },
   "ne": {
@@ -267,8 +267,8 @@
       "bui": "根",
       "sihyouseibun": "プエラリン"
     },
-    "カンゾウ　　　　　　　　シャカンゾウ": {
-      "syouyakumei": "カンゾウ　　　　　　　　シャカンゾウ",
+    "カンゾウ,シャカンゾウ": {
+      "syouyakumei": "カンゾウ,シャカンゾウ",
       "kigen": "ウラルカンゾウ",
       "gakumei": "Glycyrrhiza uralensis",
       "kamoku": "マメ科",
