@@ -3,7 +3,8 @@
   var type_of_answer = "syouyakumei"
   const ToA = {"syouyakumei":"生薬名","kigen":"基原","sihyouseibun":"指標成分","gakumei":"学名","kamoku":"科目","bui":"部位"};
   var number_of_Q = 10
-  var bug = "hi"
+  var modedict = {"type":"answercontainer","choose":"choosecontainer"}
+  mode = "choose"
   const data = {
   "kawa": {
     "オウバク": {
@@ -28,7 +29,7 @@
       "gakumei": "Mangolia obovata",
       "kamoku": "モクレン科",
       "bui": "樹皮",
-      "sihyouseibun": "マグノクラリン、マグノロール"
+      "sihyouseibun": "マグノクラリン"
     },
     "トチュウ": {
       "syouyakumei": "トチュウ",
@@ -94,7 +95,7 @@
       "gakumei": "Cyperus rotundus",
       "kamoku": "カヤツリウサ科",
       "bui": "根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "αシペロン"
     },
     "サンヤク": {
       "syouyakumei": "サンヤク",
@@ -109,16 +110,8 @@
       "kigen": "ショウガ",
       "gakumei": "Zingiber officinale",
       "kamoku": "ショウガ科",
-      "bui": "根茎",
-      "sihyouseibun": "[6]-ギンゲロール"
-    },
-    "カンキョウ": {
-      "syouyakumei": "カンキョウ",
-      "kigen": "ショウガ",
-      "gakumei": "Zingiber officinale",
-      "kamoku": "ショウガ科",
-      "bui": "湯通しまたは蒸してから乾燥",
-      "sihyouseibun": "[6]-ショウガオール"
+      "bui": "根茎（ショウキョウ）",
+      "sihyouseibun": "[6]-ギンゲロール（ショウキョウ）"
     },
     "ショウマ": {
       "syouyakumei": "ショウマ",
@@ -126,7 +119,7 @@
       "gakumei": "Cimicifuga simplex",
       "kamoku": "キンポウゲ科",
       "bui": "根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "シミゲノール"
     },
     "センキュウ": {
       "syouyakumei": "センキュウ",
@@ -158,7 +151,7 @@
       "gakumei": "Alisma orientale",
       "kamoku": "オモダカ科",
       "bui": "塊茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "アリソールA"
     },
     "チクセツニンジン": {
       "syouyakumei": "チクセツニンジン",
@@ -174,7 +167,7 @@
       "gakumei": "Anemarrhena asphodeloides",
       "kamoku": "ユリ科",
       "bui": "根茎",
-      "sihyouseibun": "チモサポニンAI"
+      "sihyouseibun": "チモサポニンAⅠ"
     },
     "ハンゲ": {
       "syouyakumei": "ハンゲ",
@@ -182,7 +175,7 @@
       "gakumei": "Pinelia ternata",
       "kamoku": "サトイモ科",
       "bui": "周皮を除いた球茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "ホモゲンチジン酸"
     },
     "ビャクジュツ": {
       "syouyakumei": "ビャクジュツ",
@@ -231,6 +224,14 @@
       "kamoku": "リンドウ科",
       "bui": "根および根茎",
       "sihyouseibun": "ゲンチオピクロシド"
+    },
+    "カンキョウ": {
+      "syouyakumei": "カンキョウ",
+      "kigen": "ショウガ",
+      "gakumei": "Zingiber officinale",
+      "kamoku": "ショウガ科",
+      "bui": "湯通しまたは蒸してから乾燥（カンキョウ）",
+      "sihyouseibun": "[6]-ショウガオール（カンキョウ）"
     }
   },
   "ne": {
@@ -256,7 +257,7 @@
       "gakumei": "Polygala tenuifolia",
       "kamoku": "ヒメハギ科",
       "bui": "根",
-      "sihyouseibun": "テヌイフォリン"
+      "sihyouseibun": "オンジサポニン"
     },
     "カッコン": {
       "syouyakumei": "カッコン",
@@ -266,20 +267,12 @@
       "bui": "根",
       "sihyouseibun": "プエラリン"
     },
-    "カンゾウ": {
-      "syouyakumei": "カンゾウ",
+    "カンゾウ　　　　　　　　シャカンゾウ": {
+      "syouyakumei": "カンゾウ　　　　　　　　シャカンゾウ",
       "kigen": "ウラルカンゾウ",
       "gakumei": "Glycyrrhiza uralensis",
       "kamoku": "マメ科",
       "bui": "根およびストロン",
-      "sihyouseibun": "グリチルリチン酸"
-    },
-    "シャカンゾウ": {
-      "syouyakumei": "シャカンゾウ",
-      "kigen": "ウラルカンゾウ",
-      "gakumei": "Glycyrrhiza uralensis",
-      "kamoku": "マメ科",
-      "bui": "修治された根およびストロン",
       "sihyouseibun": "グリチルリチン酸"
     },
     "キキョウ": {
@@ -304,7 +297,7 @@
       "gakumei": "Asiasarum sieboldii",
       "kamoku": "ウマノスズグサ科",
       "bui": "根および根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "メチルオイゲノール"
     },
     "ジオウ": {
       "syouyakumei": "ジオウ",
@@ -360,15 +353,7 @@
       "gakumei": "Panax ginseng ",
       "kamoku": "ウコギ科",
       "bui": "根",
-      "sihyouseibun": "ギンセノシドRb1、Rg1"
-    },
-    "コウジン": {
-      "syouyakumei": "コウジン",
-      "kigen": "オタネニンジン",
-      "gakumei": "Panax ginseng ",
-      "kamoku": "ウコギ科",
-      "bui": "蒸して乾燥した根",
-      "sihyouseibun": "ギンセノシドRb1、Rg1"
+      "sihyouseibun": "ギンセノシド"
     },
     "バクモンドウ": {
       "syouyakumei": "バクモンドウ",
@@ -376,7 +361,7 @@
       "gakumei": "Ophiopogon japonicus",
       "kamoku": "ユリ科",
       "bui": "根の肥大部",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "オフィオポゴニンB"
     },
     "ブシ": {
       "syouyakumei": "ブシ",
@@ -417,6 +402,14 @@
       "kamoku": "ナス科",
       "bui": "根茎および根",
       "sihyouseibun": "l-ヒヨスチアミン、スコポラミン"
+    },
+    "コウジン": {
+      "syouyakumei": "コウジン",
+      "kigen": "オタネニンジン",
+      "gakumei": "Panax ginseng ",
+      "kamoku": "ウコギ科",
+      "bui": "根(蒸してから乾燥させたもの)",
+      "sihyouseibun": "ギンセノシド"
     }
   },
   "kuki": {},
@@ -707,7 +700,7 @@
       "gakumei": "Secale cereale",
       "kamoku": "イネ科",
       "bui": "菌核",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "エルゴメトリン"
     },
     "ブクリョウ": {
       "syouyakumei": "ブクリョウ",
@@ -739,7 +732,7 @@
       "gakumei": "Papaver somniferum",
       "kamoku": "ケシ科",
       "bui": "未熟果実から得られる乾燥乳液",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "モルヒネ"
     },
     "アロエ": {
       "syouyakumei": "アロエ",
@@ -771,7 +764,7 @@
       "gakumei": "Ostrea gigas",
       "kamoku": "イタボガキ科",
       "bui": "貝殻",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "炭酸カルシウム"
     },
     "ユウタン": {
       "syouyakumei": "ユウタン",
@@ -779,7 +772,7 @@
       "gakumei": "Ursus arctos",
       "kamoku": "クマ科",
       "bui": "胆嚢、胆汁乾燥物",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "ウルソデオキシコール酸"
     },
     "カッセキ": {
       "syouyakumei": "カッセキ",
@@ -837,6 +830,11 @@
     console.log(number_of_Q);
   }
 
+  function SetMode(target){
+    mode = target;
+    console.log(mode);
+  }
+
   function StartGame(){
     document.getElementById('config').classList.add('d-none');
     document.getElementById('page_question').classList.remove('d-none');
@@ -850,10 +848,16 @@
     
   }
 
-function Step1(){
-    console.log("stepped");
-    let submitted_answer = document.getElementById('answertextbox').value;
-    document.getElementById('answercontainer').classList.add('d-none');
+
+function Step1(answer){
+    if(mode=="type"){
+      submitted_answer = document.getElementById('answertextbox').value;
+    }
+    else{
+      submitted_answer = document.getElementById(answer).textContent;
+    }
+    console.log("stepped. answer is ",submitted_answer);
+    document.getElementById(modedict[mode]).classList.add('d-none');
     if(submitted_answer == Questions[Progress]["Answer"]){
         number_of_correct += 1;
         document.getElementById("C_correction").textContent = "正解！";
@@ -870,7 +874,7 @@ function Step2(){
     console.log(Progress);
     if(Progress < number_of_Q){
         SetQuestion(Questions[Progress]);
-        document.getElementById('answercontainer').classList.remove('d-none');
+        document.getElementById(modedict[mode]).classList.remove('d-none');
     }
     else{
         FinishGame();
@@ -889,15 +893,26 @@ function MakeList(){
 }
 
 function SetQuestion(Qdata){
-    console.log(Qdata)
-    document.getElementById("C_syouyakumei").textContent = Qdata["syouyakumei"];
-    document.getElementById("C_kigen").textContent = Qdata["kigen"];
-    document.getElementById("C_gakumei").textContent = Qdata["gakumei"];
-    document.getElementById("C_kamoku").textContent = Qdata["kamoku"];
-    document.getElementById("C_bui").textContent = Qdata["bui"];
-    document.getElementById("C_sihyouseibun").textContent = Qdata["sihyouseibun"];
+  console.log(Qdata);
+  document.getElementById("C_syouyakumei").textContent = Qdata["syouyakumei"];
+  document.getElementById("C_kigen").textContent = Qdata["kigen"];
+  document.getElementById("C_gakumei").textContent = Qdata["gakumei"];
+  document.getElementById("C_kamoku").textContent = Qdata["kamoku"];
+  document.getElementById("C_bui").textContent = Qdata["bui"];
+  document.getElementById("C_sihyouseibun").textContent = Qdata["sihyouseibun"];
+  if(mode=="type"){
     document.getElementById("C_answer").textContent = Qdata["Answer"];
-    console.log("Question is set.")
+  }
+  else if(mode=="choose"){
+    document.getElementById("choose1").textContent = Qdata["choose1"];
+    document.getElementById("choose2").textContent = Qdata["choose2"];
+    document.getElementById("choose3").textContent = Qdata["choose3"];
+    document.getElementById("C_answer").textContent = Qdata["Answer"];
+  }
+  console.log("Question is set.")
+  document.getElementById("answercontainer").classList.add("d-none");
+  document.getElementById("choosecontainer").classList.add("d-none");
+  document.getElementById(modedict[mode]).classList.remove("d-none");
 }
 
 function MakeQuestion(number){
@@ -910,10 +925,15 @@ function MakeQuestion(number){
     else{
         var N_o_Q = number
     }
-    for(let i=0;i < N_o_Q ;i++){
-        let T_number = Math.floor(Math.random()*Object.keys(RawQuestionList).length);
-        let Q_rawdata = RawQuestionList[Object.keys(RawQuestionList)[T_number]];
-        let Q_data = {};
+    console.log("N_o_Q",N_o_Q)
+    
+    if(mode == "type"){
+      console.log("type question");
+      for(let i=0;i < N_o_Q ;i++){
+        var T_number = Math.floor(Math.random()*Object.keys(RawQuestionList).length);
+        var Q_rawdata = RawQuestionList[Object.keys(RawQuestionList)[T_number]];
+        var Q_data = {};
+        console.log("Q_rawdata:",Q_rawdata)
         for(key in Q_rawdata){
             if(Hints[key]){
                 Q_data[key] = Q_rawdata[key];
@@ -922,13 +942,59 @@ function MakeQuestion(number){
                 Q_data[key] = "-";
             }
         }
-        Q_data["Answer"] = Q_rawdata[type_of_answer]
+        Q_data["Answer"] = Q_rawdata[type_of_answer];
         QuestionList.push(Q_data);
         delete RawQuestionList[Object.keys(RawQuestionList)[T_number]];
+      }
     }
+    else if(mode == "choose"){
+      for(let i=0;i < N_o_Q;i++){
+        var T_number = Math.floor(Math.random()*Object.keys(RawQuestionList).length);
+        var Q_rawdata = RawQuestionList[Object.keys(RawQuestionList)[T_number]];
+        var Q_data = {};
+        console.log("Q_rawdata:",Q_rawdata)
+        for(key in Q_rawdata){
+          if(Hints[key]){
+              Q_data[key] = Q_rawdata[key];
+          }
+          else{
+              Q_data[key] = "-";
+          }
+        }
+        Q_data["Answer"] = Q_rawdata[type_of_answer];
+        var trueanswer_number = Math.floor(Math.random()*3);
+        var fakes = []
+        for(key in RawQuestionList){
+          fakes.push(RawQuestionList[key][type_of_answer]);
+        }
+        fakes = Array.from(new Set(fakes));
+        fakes = fakes.filter(element => !(element == Q_rawdata[type_of_answer]));
+        if(trueanswer_number == 0){
+          Q_data["choose1"] = Q_rawdata[type_of_answer];
+          Q_data["choose2"] = fakes[Math.floor(Math.random()*fakes.length)];
+          fakes = fakes.filter(element => !(element==Q_data["choose2"]));
+          Q_data["choose3"] = fakes[Math.floor(Math.random()*fakes.length)];
+        }
+        if(trueanswer_number == 1){
+          Q_data["choose2"] = Q_rawdata[type_of_answer];
+          Q_data["choose3"] = fakes[Math.floor(Math.random()*fakes.length)];
+          fakes = fakes.filter(element => !(element==Q_data["choose3"]));
+          Q_data["choose1"] = fakes[Math.floor(Math.random()*fakes.length)];
+        }
+        if(trueanswer_number == 2){
+          Q_data["choose3"] = Q_rawdata[type_of_answer];
+          Q_data["choose1"] = fakes[Math.floor(Math.random()*fakes.length)];
+          fakes = fakes.filter(element => !(element==Q_data["choose1"]));
+          Q_data["choose2"] = fakes[Math.floor(Math.random()*fakes.length)];
+        }
+        QuestionList.push(Q_data);
+        delete RawQuestionList[Object.keys(RawQuestionList)[T_number]];
+        }
+      }
     console.log("Question:",QuestionList)
-    return QuestionList
+    return QuestionList 
 }
+
 document.getElementById("answertextbox").addEventListener("keydown", submit_event);
 
 function FinishGame(){
@@ -937,6 +1003,7 @@ function FinishGame(){
     document.getElementById('page_question').classList.add('d-none');
     document.getElementById('result').classList.remove('d-none');
 }
+
 function submit_event(e) {
   if (e.key === "Enter") {
     console.log('回答されました。');

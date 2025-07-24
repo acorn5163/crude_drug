@@ -85,6 +85,16 @@
   </div>
 
   <div class="container-fluid p-4 bg-outline-primary text-blue text-center">
+    <h1>4.問題数</h1>
+    <div class="btn-group">
+      <input type="radio" class="btn-check" id="type" autocomplete="off" name = "Mode">
+      <label class="btn btn-outline-primary" for = "type" onclick="SetMode('type')">入力</label> 
+      <input type="radio" class="btn-check" id="choose" autocomplete="off" name = "Mode" checked>
+      <label class="btn btn-outline-primary" for = "choose" onclick="SetMode('choose')">選択</label>
+    </div>
+  </div>
+
+  <div class="container-fluid p-4 bg-outline-primary text-blue text-center">
     <button class="btn btn-outline-primary" onclick = "StartGame()">スタート</button>
   </div>
 </div>
@@ -151,6 +161,26 @@
       <input type="text" id="answertextbox">
       <button type="button" class="btn btn-primary" onclick="Step1()">回答</button>
   </div>
+
+  <div class="container mt-5" id="choosecontainer">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="row">
+          <button class="btn btn-primary" id="choose1" onclick="Step1('choose1')"></button>
+        </div> 
+      </div>
+      <div class="col-sm-4">
+        <div class="row">
+          <button class="btn btn-primary" id="choose2" onclick="Step1('choose2')"></button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="row">
+          <button class="btn btn-primary" id="choose3" onclick="Step1('choose3')"></button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container mt-5" id="Container_answer" class="d-none">
     <div class="row">
       <div class="col-sm-5">
@@ -171,10 +201,9 @@
       <button class="btn btn-outline-primary" onclick="Step2()">次へ</button>
     </div>
     </div>
-    </div>
-
-  </div>
 </div>
+
+
 
 <div id="result" class="d-none">
   <div class="container">

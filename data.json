@@ -22,7 +22,7 @@
       "gakumei": "Mangolia obovata",
       "kamoku": "モクレン科",
       "bui": "樹皮",
-      "sihyouseibun": "マグノクラリン、マグノロール"
+      "sihyouseibun": "マグノクラリン"
     },
     "トチュウ": {
       "syouyakumei": "トチュウ",
@@ -88,7 +88,7 @@
       "gakumei": "Cyperus rotundus",
       "kamoku": "カヤツリウサ科",
       "bui": "根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "αシペロン"
     },
     "サンヤク": {
       "syouyakumei": "サンヤク",
@@ -103,16 +103,8 @@
       "kigen": "ショウガ",
       "gakumei": "Zingiber officinale",
       "kamoku": "ショウガ科",
-      "bui": "根茎",
-      "sihyouseibun": "[6]-ギンゲロール"
-    },
-    "カンキョウ": {
-      "syouyakumei": "カンキョウ",
-      "kigen": "ショウガ",
-      "gakumei": "Zingiber officinale",
-      "kamoku": "ショウガ科",
-      "bui": "湯通しまたは蒸してから乾燥",
-      "sihyouseibun": "[6]-ショウガオール"
+      "bui": "根茎（ショウキョウ）",
+      "sihyouseibun": "[6]-ギンゲロール（ショウキョウ）"
     },
     "ショウマ": {
       "syouyakumei": "ショウマ",
@@ -120,7 +112,7 @@
       "gakumei": "Cimicifuga simplex",
       "kamoku": "キンポウゲ科",
       "bui": "根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "シミゲノール"
     },
     "センキュウ": {
       "syouyakumei": "センキュウ",
@@ -152,7 +144,7 @@
       "gakumei": "Alisma orientale",
       "kamoku": "オモダカ科",
       "bui": "塊茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "アリソールA"
     },
     "チクセツニンジン": {
       "syouyakumei": "チクセツニンジン",
@@ -168,7 +160,7 @@
       "gakumei": "Anemarrhena asphodeloides",
       "kamoku": "ユリ科",
       "bui": "根茎",
-      "sihyouseibun": "チモサポニンAI"
+      "sihyouseibun": "チモサポニンAⅠ"
     },
     "ハンゲ": {
       "syouyakumei": "ハンゲ",
@@ -176,7 +168,7 @@
       "gakumei": "Pinelia ternata",
       "kamoku": "サトイモ科",
       "bui": "周皮を除いた球茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "ホモゲンチジン酸"
     },
     "ビャクジュツ": {
       "syouyakumei": "ビャクジュツ",
@@ -225,6 +217,14 @@
       "kamoku": "リンドウ科",
       "bui": "根および根茎",
       "sihyouseibun": "ゲンチオピクロシド"
+    },
+    "カンキョウ": {
+      "syouyakumei": "カンキョウ",
+      "kigen": "ショウガ",
+      "gakumei": "Zingiber officinale",
+      "kamoku": "ショウガ科",
+      "bui": "湯通しまたは蒸してから乾燥（カンキョウ）",
+      "sihyouseibun": "[6]-ショウガオール（カンキョウ）"
     }
   },
   "ne": {
@@ -250,7 +250,7 @@
       "gakumei": "Polygala tenuifolia",
       "kamoku": "ヒメハギ科",
       "bui": "根",
-      "sihyouseibun": "テヌイフォリン"
+      "sihyouseibun": "オンジサポニン"
     },
     "カッコン": {
       "syouyakumei": "カッコン",
@@ -260,20 +260,12 @@
       "bui": "根",
       "sihyouseibun": "プエラリン"
     },
-    "カンゾウ": {
-      "syouyakumei": "カンゾウ",
+    "カンゾウ　　　　　　　　シャカンゾウ": {
+      "syouyakumei": "カンゾウ　　　　　　　　シャカンゾウ",
       "kigen": "ウラルカンゾウ",
       "gakumei": "Glycyrrhiza uralensis",
       "kamoku": "マメ科",
       "bui": "根およびストロン",
-      "sihyouseibun": "グリチルリチン酸"
-    },
-    "シャカンゾウ": {
-      "syouyakumei": "シャカンゾウ",
-      "kigen": "ウラルカンゾウ",
-      "gakumei": "Glycyrrhiza uralensis",
-      "kamoku": "マメ科",
-      "bui": "修治された根およびストロン",
       "sihyouseibun": "グリチルリチン酸"
     },
     "キキョウ": {
@@ -298,7 +290,7 @@
       "gakumei": "Asiasarum sieboldii",
       "kamoku": "ウマノスズグサ科",
       "bui": "根および根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "メチルオイゲノール"
     },
     "ジオウ": {
       "syouyakumei": "ジオウ",
@@ -354,15 +346,7 @@
       "gakumei": "Panax ginseng ",
       "kamoku": "ウコギ科",
       "bui": "根",
-      "sihyouseibun": "ギンセノシドRb1、Rg1"
-    },
-    "コウジン": {
-      "syouyakumei": "コウジン",
-      "kigen": "オタネニンジン",
-      "gakumei": "Panax ginseng ",
-      "kamoku": "ウコギ科",
-      "bui": "蒸して乾燥した根",
-      "sihyouseibun": "ギンセノシドRb1、Rg1"
+      "sihyouseibun": "ギンセノシド"
     },
     "バクモンドウ": {
       "syouyakumei": "バクモンドウ",
@@ -370,7 +354,7 @@
       "gakumei": "Ophiopogon japonicus",
       "kamoku": "ユリ科",
       "bui": "根の肥大部",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "オフィオポゴニンB"
     },
     "ブシ": {
       "syouyakumei": "ブシ",
@@ -411,6 +395,14 @@
       "kamoku": "ナス科",
       "bui": "根茎および根",
       "sihyouseibun": "l-ヒヨスチアミン、スコポラミン"
+    },
+    "コウジン": {
+      "syouyakumei": "コウジン",
+      "kigen": "オタネニンジン",
+      "gakumei": "Panax ginseng ",
+      "kamoku": "ウコギ科",
+      "bui": "根(蒸してから乾燥させたもの)",
+      "sihyouseibun": "ギンセノシド"
     }
   },
   "kuki": {},
@@ -701,7 +693,7 @@
       "gakumei": "Secale cereale",
       "kamoku": "イネ科",
       "bui": "菌核",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "エルゴメトリン"
     },
     "ブクリョウ": {
       "syouyakumei": "ブクリョウ",
@@ -733,7 +725,7 @@
       "gakumei": "Papaver somniferum",
       "kamoku": "ケシ科",
       "bui": "未熟果実から得られる乾燥乳液",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "モルヒネ"
     },
     "アロエ": {
       "syouyakumei": "アロエ",
@@ -765,7 +757,7 @@
       "gakumei": "Ostrea gigas",
       "kamoku": "イタボガキ科",
       "bui": "貝殻",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "炭酸カルシウム"
     },
     "ユウタン": {
       "syouyakumei": "ユウタン",
@@ -773,7 +765,7 @@
       "gakumei": "Ursus arctos",
       "kamoku": "クマ科",
       "bui": "胆嚢、胆汁乾燥物",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "ウルソデオキシコール酸"
     },
     "カッセキ": {
       "syouyakumei": "カッセキ",
