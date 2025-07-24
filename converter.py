@@ -8,7 +8,7 @@ print(df)
 
 dict = {"kawa":{},"konkei":{},"ne":{},"kuki":{},"hana":{},"ha":{},"syusi":{},"kazitu":{},"other":{}}
 for row in df.itertuples():
-    dict[row.tag][row.和名] = {"syouyakumei":row.和名,"kigen":row.基原植物,"gakumei":row.基原学名,"kamoku":row.科目,"bui":row.部位,"sihyouseibun":row.指標成分}
+    dict[row.tag][row.和名] = {"syouyakumei":row.和名,"kigen":row.基原植物,"gakumei":row.基原学名,"kamoku":row.科目,"bui":row.部位,"sihyouseibun":row.指標成分,"importance":row.important}
 
 print(dict)
 with open('data.json', 'w', encoding="utf-8") as f:

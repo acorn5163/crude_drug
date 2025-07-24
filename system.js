@@ -4,6 +4,7 @@
   const ToA = {"syouyakumei":"生薬名","kigen":"基原","sihyouseibun":"指標成分","gakumei":"学名","kamoku":"科目","bui":"部位"};
   var number_of_Q = 10
   var modedict = {"type":"answercontainer","choose":"choosecontainer"}
+  var importance = false
   mode = "choose"
   const data = {
   "kawa": {
@@ -13,7 +14,8 @@
       "gakumei": "Phellodendron amurense",
       "kamoku": "ミカン科",
       "bui": "周皮を除いた樹皮",
-      "sihyouseibun": "ベルベリン"
+      "sihyouseibun": "ベルベリン",
+      "importance": "Y"
     },
     "ケイヒ": {
       "syouyakumei": "ケイヒ",
@@ -21,7 +23,8 @@
       "gakumei": "Cinnamomum cassia ",
       "kamoku": "クスノキ科",
       "bui": "樹皮",
-      "sihyouseibun": "シンナムアルデヒド"
+      "sihyouseibun": "シンナムアルデヒド",
+      "importance": "Y"
     },
     "コウボク": {
       "syouyakumei": "コウボク",
@@ -29,7 +32,8 @@
       "gakumei": "Mangolia obovata",
       "kamoku": "モクレン科",
       "bui": "樹皮",
-      "sihyouseibun": "マグノクラリン"
+      "sihyouseibun": "マグノクラリン",
+      "importance": "Y"
     },
     "トチュウ": {
       "syouyakumei": "トチュウ",
@@ -37,7 +41,8 @@
       "gakumei": "Eucommia ulumoides",
       "kamoku": "トチュウ科",
       "bui": "樹皮",
-      "sihyouseibun": "グッタペルカ"
+      "sihyouseibun": "グッタペルカ",
+      "importance": "N"
     },
     "ボタンピ": {
       "syouyakumei": "ボタンピ",
@@ -45,7 +50,8 @@
       "gakumei": "Paeonia suffruticosa",
       "kamoku": "ボタン科",
       "bui": "根皮",
-      "sihyouseibun": "ぺオノール"
+      "sihyouseibun": "ぺオノール",
+      "importance": "Y"
     }
   },
   "konkei": {
@@ -55,7 +61,8 @@
       "gakumei": "Uncaria rhynchophylla",
       "kamoku": "アカネ科",
       "bui": "とげのついた茎",
-      "sihyouseibun": "リンコフィリン"
+      "sihyouseibun": "リンコフィリン",
+      "importance": "N"
     },
     "ボウイ": {
       "syouyakumei": "ボウイ",
@@ -63,7 +70,8 @@
       "gakumei": "Sinomenium acutum",
       "kamoku": "ツヅラフジ科",
       "bui": "つる性の茎および根茎",
-      "sihyouseibun": "シノメニン"
+      "sihyouseibun": "シノメニン",
+      "importance": "N"
     },
     "モクツウ": {
       "syouyakumei": "モクツウ",
@@ -71,7 +79,8 @@
       "gakumei": "Akebia quinata",
       "kamoku": "アケビ科",
       "bui": "つる性の茎",
-      "sihyouseibun": "アケビオシド"
+      "sihyouseibun": "アケビオシド",
+      "importance": "N"
     },
     "オウレン": {
       "syouyakumei": "オウレン",
@@ -79,7 +88,8 @@
       "gakumei": "Coptis japonica",
       "kamoku": "キンポウゲ科",
       "bui": "根を除いた根茎",
-      "sihyouseibun": "ベルベリン"
+      "sihyouseibun": "ベルベリン",
+      "importance": "Y"
     },
     "ガジュツ": {
       "syouyakumei": "ガジュツ",
@@ -87,7 +97,8 @@
       "gakumei": "Curcuma zedoaria",
       "kamoku": "ショウガ科",
       "bui": "根茎を湯通しして乾燥したもの",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "コウブシ": {
       "syouyakumei": "コウブシ",
@@ -95,7 +106,8 @@
       "gakumei": "Cyperus rotundus",
       "kamoku": "カヤツリウサ科",
       "bui": "根茎",
-      "sihyouseibun": "αシペロン"
+      "sihyouseibun": "αシペロン",
+      "importance": "N"
     },
     "サンヤク": {
       "syouyakumei": "サンヤク",
@@ -103,15 +115,17 @@
       "gakumei": "Dioscoria japonica",
       "kamoku": "ヤマノイモ科",
       "bui": "根茎",
-      "sihyouseibun": "ジオスシン"
+      "sihyouseibun": "ジオスシン",
+      "importance": "Y"
     },
     "ショウキョウ": {
       "syouyakumei": "ショウキョウ",
       "kigen": "ショウガ",
       "gakumei": "Zingiber officinale",
       "kamoku": "ショウガ科",
-      "bui": "根茎（ショウキョウ）",
-      "sihyouseibun": "[6]-ギンゲロール（ショウキョウ）"
+      "bui": "根茎",
+      "sihyouseibun": "[6]-ギンゲロール",
+      "importance": "Y"
     },
     "ショウマ": {
       "syouyakumei": "ショウマ",
@@ -119,7 +133,8 @@
       "gakumei": "Cimicifuga simplex",
       "kamoku": "キンポウゲ科",
       "bui": "根茎",
-      "sihyouseibun": "シミゲノール"
+      "sihyouseibun": "シミゲノール",
+      "importance": "N"
     },
     "センキュウ": {
       "syouyakumei": "センキュウ",
@@ -127,7 +142,8 @@
       "gakumei": "Cnidium officinale",
       "kamoku": "セリ科",
       "bui": "根茎、通例湯通ししたもの",
-      "sihyouseibun": "リグスチリド"
+      "sihyouseibun": "リグスチリド",
+      "importance": "Y"
     },
     "ソウジュツ": {
       "syouyakumei": "ソウジュツ",
@@ -135,7 +151,8 @@
       "gakumei": "Atractylodes lancea ",
       "kamoku": "キク科",
       "bui": "根茎",
-      "sihyouseibun": "ヒネソール、β-オイデスモール"
+      "sihyouseibun": "ヒネソール、β-オイデスモール",
+      "importance": "Y"
     },
     "ダイオウ": {
       "syouyakumei": "ダイオウ",
@@ -143,7 +160,8 @@
       "gakumei": "Rheum palmatum",
       "kamoku": "タデ科",
       "bui": "根茎",
-      "sihyouseibun": "センノシドA"
+      "sihyouseibun": "センノシドA",
+      "importance": "Y"
     },
     "タクシャ": {
       "syouyakumei": "タクシャ",
@@ -151,7 +169,8 @@
       "gakumei": "Alisma orientale",
       "kamoku": "オモダカ科",
       "bui": "塊茎",
-      "sihyouseibun": "アリソールA"
+      "sihyouseibun": "アリソールA",
+      "importance": "Y"
     },
     "チクセツニンジン": {
       "syouyakumei": "チクセツニンジン",
@@ -159,7 +178,8 @@
       "gakumei": "Panax japonicus",
       "kamoku": "ウコギ科",
       "bui": "根茎、湯通ししたもの",
-      "sihyouseibun": "チクセツサポニンⅣ"
+      "sihyouseibun": "チクセツサポニンⅣ",
+      "importance": "N"
     },
     "チモ": {
       "syouyakumei": "チモ",
@@ -167,7 +187,8 @@
       "gakumei": "Anemarrhena asphodeloides",
       "kamoku": "ユリ科",
       "bui": "根茎",
-      "sihyouseibun": "チモサポニンAⅠ"
+      "sihyouseibun": "チモサポニンAⅠ",
+      "importance": "N"
     },
     "ハンゲ": {
       "syouyakumei": "ハンゲ",
@@ -175,7 +196,8 @@
       "gakumei": "Pinelia ternata",
       "kamoku": "サトイモ科",
       "bui": "周皮を除いた球茎",
-      "sihyouseibun": "ホモゲンチジン酸"
+      "sihyouseibun": "ホモゲンチジン酸",
+      "importance": "Y"
     },
     "ビャクジュツ": {
       "syouyakumei": "ビャクジュツ",
@@ -183,7 +205,8 @@
       "gakumei": "Atractylodes japonica",
       "kamoku": "キク科",
       "bui": "根茎",
-      "sihyouseibun": "アトラクチロン"
+      "sihyouseibun": "アトラクチロン",
+      "importance": "Y"
     },
     "ロートコン": {
       "syouyakumei": "ロートコン",
@@ -191,7 +214,8 @@
       "gakumei": "Scopolia japonica ",
       "kamoku": "ナス科",
       "bui": "根茎および根",
-      "sihyouseibun": "l-ヒヨスチアミン、スコポラミン"
+      "sihyouseibun": "l-ヒヨスチアミン、スコポラミン",
+      "importance": "Y"
     },
     "サイシン": {
       "syouyakumei": "サイシン",
@@ -199,7 +223,8 @@
       "gakumei": "Asiasarum sieboldii",
       "kamoku": "ウマノスズグサ科",
       "bui": "根および根茎",
-      "sihyouseibun": "メチルオイゲノール"
+      "sihyouseibun": "なし",
+      "importance": "Y"
     },
     "トコン": {
       "syouyakumei": "トコン",
@@ -207,7 +232,8 @@
       "gakumei": "Cephaelis ipecacuanha",
       "kamoku": "アカネ科",
       "bui": "根および根茎",
-      "sihyouseibun": "エメチン"
+      "sihyouseibun": "エメチン",
+      "importance": "Y"
     },
     "ボウフウ": {
       "syouyakumei": "ボウフウ",
@@ -215,7 +241,8 @@
       "gakumei": "Saposhnikovia divaricata",
       "kamoku": "セリ科",
       "bui": "根および根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "リュウタン": {
       "syouyakumei": "リュウタン",
@@ -223,15 +250,17 @@
       "gakumei": "Gentiana scabra",
       "kamoku": "リンドウ科",
       "bui": "根および根茎",
-      "sihyouseibun": "ゲンチオピクロシド"
+      "sihyouseibun": "ゲンチオピクロシド",
+      "importance": "N"
     },
     "カンキョウ": {
       "syouyakumei": "カンキョウ",
       "kigen": "ショウガ",
       "gakumei": "Zingiber officinale",
       "kamoku": "ショウガ科",
-      "bui": "湯通しまたは蒸してから乾燥した根",
-      "sihyouseibun": "[6]-ショウガオール"
+      "bui": "湯通しまたは蒸してから乾燥",
+      "sihyouseibun": "[6]-ショウガオール",
+      "importance": "Y"
     }
   },
   "ne": {
@@ -241,7 +270,8 @@
       "gakumei": "Astraglus membranaceus",
       "kamoku": "マメ科",
       "bui": "根",
-      "sihyouseibun": "アストラガロシドⅣ"
+      "sihyouseibun": "アストラガロシドⅣ",
+      "importance": "Y"
     },
     "オウゴン": {
       "syouyakumei": "オウゴン",
@@ -249,7 +279,8 @@
       "gakumei": "Scutellaria baicalensis",
       "kamoku": "シソ科",
       "bui": "周皮を除いた根",
-      "sihyouseibun": "バイカリン"
+      "sihyouseibun": "バイカリン",
+      "importance": "Y"
     },
     "オンジ": {
       "syouyakumei": "オンジ",
@@ -257,7 +288,8 @@
       "gakumei": "Polygala tenuifolia",
       "kamoku": "ヒメハギ科",
       "bui": "根",
-      "sihyouseibun": "オンジサポニン"
+      "sihyouseibun": "オンジサポニン",
+      "importance": "N"
     },
     "カッコン": {
       "syouyakumei": "カッコン",
@@ -265,15 +297,17 @@
       "gakumei": "Pueraria lobata",
       "kamoku": "マメ科",
       "bui": "根",
-      "sihyouseibun": "プエラリン"
+      "sihyouseibun": "プエラリン",
+      "importance": "Y"
     },
-    "カンゾウ,シャカンゾウ": {
-      "syouyakumei": "カンゾウ,シャカンゾウ",
+    "カンゾウ　　　　　　　　シャカンゾウ": {
+      "syouyakumei": "カンゾウ　　　　　　　　シャカンゾウ",
       "kigen": "ウラルカンゾウ",
       "gakumei": "Glycyrrhiza uralensis",
       "kamoku": "マメ科",
       "bui": "根およびストロン",
-      "sihyouseibun": "グリチルリチン酸"
+      "sihyouseibun": "グリチルリチン酸",
+      "importance": "Y"
     },
     "キキョウ": {
       "syouyakumei": "キキョウ",
@@ -281,7 +315,8 @@
       "gakumei": "Platycodon grandiflorus",
       "kamoku": "キキョウ科",
       "bui": "根",
-      "sihyouseibun": "プラチコディンD"
+      "sihyouseibun": "プラチコディンD",
+      "importance": "Y"
     },
     "サイコ": {
       "syouyakumei": "サイコ",
@@ -289,7 +324,8 @@
       "gakumei": "Bupleurum falcatum",
       "kamoku": "セリ科",
       "bui": "根",
-      "sihyouseibun": "サイコサポニンa"
+      "sihyouseibun": "サイコサポニンa",
+      "importance": "Y"
     },
     "サイシン": {
       "syouyakumei": "サイシン",
@@ -297,7 +333,8 @@
       "gakumei": "Asiasarum sieboldii",
       "kamoku": "ウマノスズグサ科",
       "bui": "根および根茎",
-      "sihyouseibun": "メチルオイゲノール"
+      "sihyouseibun": "メチルオイゲノール",
+      "importance": "Y"
     },
     "ジオウ": {
       "syouyakumei": "ジオウ",
@@ -305,7 +342,8 @@
       "gakumei": "Rehmannia glutinosa",
       "kamoku": "ゴマノハグサ科",
       "bui": "根もしくは根を蒸して乾燥したもの",
-      "sihyouseibun": "スタキオースもしくはマンニノトリオース"
+      "sihyouseibun": "スタキオースもしくはマンニノトリオース",
+      "importance": "Y"
     },
     "シコン": {
       "syouyakumei": "シコン",
@@ -313,7 +351,8 @@
       "gakumei": "Lithospermum erythrorhizon",
       "kamoku": "ムラサキ科",
       "bui": "根",
-      "sihyouseibun": "シコニン"
+      "sihyouseibun": "シコニン",
+      "importance": "N"
     },
     "シャクヤク": {
       "syouyakumei": "シャクヤク",
@@ -321,7 +360,8 @@
       "gakumei": "Paeonia lactiflora",
       "kamoku": "ボタン科",
       "bui": "根",
-      "sihyouseibun": "ぺオニフロリン"
+      "sihyouseibun": "ぺオニフロリン",
+      "importance": "Y"
     },
     "セネガ": {
       "syouyakumei": "セネガ",
@@ -329,7 +369,8 @@
       "gakumei": "Polygala senega",
       "kamoku": "ヒメハギ科",
       "bui": "根",
-      "sihyouseibun": "セネギンⅡ"
+      "sihyouseibun": "セネギンⅡ",
+      "importance": "N"
     },
     "トウキ": {
       "syouyakumei": "トウキ",
@@ -337,7 +378,8 @@
       "gakumei": "Angelica acutiloba ",
       "kamoku": "セリ科",
       "bui": "根",
-      "sihyouseibun": "リグスチリド"
+      "sihyouseibun": "リグスチリド",
+      "importance": "Y"
     },
     "トコン": {
       "syouyakumei": "トコン",
@@ -345,7 +387,8 @@
       "gakumei": "Cephaelis ipecacuanha",
       "kamoku": "アカネ科",
       "bui": "根および根茎",
-      "sihyouseibun": "エメチン"
+      "sihyouseibun": "エメチン",
+      "importance": "N"
     },
     "ニンジン": {
       "syouyakumei": "ニンジン",
@@ -353,7 +396,8 @@
       "gakumei": "Panax ginseng ",
       "kamoku": "ウコギ科",
       "bui": "根",
-      "sihyouseibun": "ギンセノシド"
+      "sihyouseibun": "ギンセノシド",
+      "importance": "Y"
     },
     "バクモンドウ": {
       "syouyakumei": "バクモンドウ",
@@ -361,7 +405,8 @@
       "gakumei": "Ophiopogon japonicus",
       "kamoku": "ユリ科",
       "bui": "根の肥大部",
-      "sihyouseibun": "オフィオポゴニンB"
+      "sihyouseibun": "オフィオポゴニンB",
+      "importance": "N"
     },
     "ブシ": {
       "syouyakumei": "ブシ",
@@ -369,7 +414,8 @@
       "gakumei": "Aconitum carmichaeli",
       "kamoku": "キンポウゲ科",
       "bui": "塊根",
-      "sihyouseibun": "ベンゾイルメサコニン"
+      "sihyouseibun": "ベンゾイルメサコニン",
+      "importance": "Y"
     },
     "ボウフウ": {
       "syouyakumei": "ボウフウ",
@@ -377,7 +423,8 @@
       "gakumei": "Saposhnikovia divaricata",
       "kamoku": "セリ科",
       "bui": "根および根茎",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "リュウタン": {
       "syouyakumei": "リュウタン",
@@ -385,7 +432,8 @@
       "gakumei": "Gentiana scabra",
       "kamoku": "リンドウ科",
       "bui": "根および根茎",
-      "sihyouseibun": "ゲンチオピクロシド"
+      "sihyouseibun": "ゲンチオピクロシド",
+      "importance": "N"
     },
     "ウコン": {
       "syouyakumei": "ウコン",
@@ -393,7 +441,8 @@
       "gakumei": "Curcuma longa",
       "kamoku": "ショウガ科",
       "bui": "根茎を湯通ししたもの",
-      "sihyouseibun": "クルクミン"
+      "sihyouseibun": "クルクミン",
+      "importance": "N"
     },
     "ロートコン": {
       "syouyakumei": "ロートコン",
@@ -401,7 +450,8 @@
       "gakumei": "Scopolia japonica ",
       "kamoku": "ナス科",
       "bui": "根茎および根",
-      "sihyouseibun": "l-ヒヨスチアミン、スコポラミン"
+      "sihyouseibun": "l-ヒヨスチアミン、スコポラミン",
+      "importance": "Y"
     },
     "コウジン": {
       "syouyakumei": "コウジン",
@@ -409,7 +459,8 @@
       "gakumei": "Panax ginseng ",
       "kamoku": "ウコギ科",
       "bui": "根(蒸してから乾燥させたもの)",
-      "sihyouseibun": "ギンセノシド"
+      "sihyouseibun": "ギンセノシド",
+      "importance": "Y"
     }
   },
   "kuki": {},
@@ -420,7 +471,8 @@
       "gakumei": "Artemisia capillaris ",
       "kamoku": "キク科",
       "bui": "頭花",
-      "sihyouseibun": "スコパロン"
+      "sihyouseibun": "スコパロン",
+      "importance": "N"
     },
     "カイカ": {
       "syouyakumei": "カイカ",
@@ -428,7 +480,8 @@
       "gakumei": "Sophora japonica ",
       "kamoku": "マメ科",
       "bui": "つぼみ",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "コウカ": {
       "syouyakumei": "コウカ",
@@ -436,7 +489,8 @@
       "gakumei": "Carthamus tinctorius",
       "kamoku": "キク科",
       "bui": "花",
-      "sihyouseibun": "サフラミンA、カルタミン"
+      "sihyouseibun": "サフラミンA、カルタミン",
+      "importance": "N"
     },
     "サフラン": {
       "syouyakumei": "サフラン",
@@ -444,7 +498,8 @@
       "gakumei": "Crocus sativus",
       "kamoku": "アヤメ科",
       "bui": "柱頭",
-      "sihyouseibun": "クロシン、クロセチン"
+      "sihyouseibun": "クロシン、クロセチン",
+      "importance": "Y"
     },
     "チョウジ": {
       "syouyakumei": "チョウジ",
@@ -452,7 +507,8 @@
       "gakumei": "Syzygium aromaticum",
       "kamoku": "フトモモ科",
       "bui": "つぼみ",
-      "sihyouseibun": "オイゲノール"
+      "sihyouseibun": "オイゲノール",
+      "importance": "N"
     }
   },
   "ha": {
@@ -462,7 +518,8 @@
       "gakumei": "Digitalis purpurea",
       "kamoku": "ゴマノハグサ科",
       "bui": "葉",
-      "sihyouseibun": "ジギトキシン"
+      "sihyouseibun": "ジギトキシン",
+      "importance": "Y"
     },
     "センナ": {
       "syouyakumei": "センナ",
@@ -470,7 +527,8 @@
       "gakumei": "Cassia angustifolia",
       "kamoku": "マメ科",
       "bui": "小葉",
-      "sihyouseibun": "センノシドA"
+      "sihyouseibun": "センノシドA",
+      "importance": "Y"
     },
     "ソヨウ": {
       "syouyakumei": "ソヨウ",
@@ -478,7 +536,8 @@
       "gakumei": "Perilla frutescens",
       "kamoku": "シソ科",
       "bui": "葉および枝先",
-      "sihyouseibun": "(-)-ぺリルアルデヒド"
+      "sihyouseibun": "(-)-ぺリルアルデヒド",
+      "importance": "N"
     }
   },
   "syusi": {
@@ -488,7 +547,8 @@
       "gakumei": "Prunus armeniaca",
       "kamoku": "バラ科",
       "bui": "種子",
-      "sihyouseibun": "アミグダリン"
+      "sihyouseibun": "アミグダリン",
+      "importance": "Y"
     },
     "ケツメイシ": {
       "syouyakumei": "ケツメイシ",
@@ -496,7 +556,8 @@
       "gakumei": "Cassia obtusifolia",
       "kamoku": "マメ科",
       "bui": "種子",
-      "sihyouseibun": "アウランチオオブツシン"
+      "sihyouseibun": "アウランチオオブツシン",
+      "importance": "N"
     },
     "コウベイ": {
       "syouyakumei": "コウベイ",
@@ -504,7 +565,8 @@
       "gakumei": "Oryza sativa",
       "kamoku": "イネ科",
       "bui": "種子",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "サンソウニン": {
       "syouyakumei": "サンソウニン",
@@ -512,7 +574,8 @@
       "gakumei": "Ziziphus jujuba",
       "kamoku": "クロウメモドキ科",
       "bui": "種子",
-      "sihyouseibun": "スピノシン"
+      "sihyouseibun": "スピノシン",
+      "importance": "N"
     },
     "シャゼンシ": {
       "syouyakumei": "シャゼンシ",
@@ -520,7 +583,8 @@
       "gakumei": "Plantago asiatica",
       "kamoku": "オオバコ科",
       "bui": "種子",
-      "sihyouseibun": "プランタサン"
+      "sihyouseibun": "プランタサン",
+      "importance": "N"
     },
     "トウニン": {
       "syouyakumei": "トウニン",
@@ -528,7 +592,8 @@
       "gakumei": "Prunus persica",
       "kamoku": "バラ科",
       "bui": "種子",
-      "sihyouseibun": "アミグダリン"
+      "sihyouseibun": "アミグダリン",
+      "importance": "Y"
     },
     "ホミカ": {
       "syouyakumei": "ホミカ",
@@ -536,7 +601,8 @@
       "gakumei": "Strychnos nux-vomica",
       "kamoku": "マチン科",
       "bui": "種子",
-      "sihyouseibun": "ストリキニーネ、ブルシン"
+      "sihyouseibun": "ストリキニーネ、ブルシン",
+      "importance": "N"
     },
     "ヨクイニン": {
       "syouyakumei": "ヨクイニン",
@@ -544,7 +610,8 @@
       "gakumei": "Coix lacryma-jobi",
       "kamoku": "イネ科",
       "bui": "種皮を除いた種子",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "Y"
     }
   },
   "kazitu": {
@@ -554,7 +621,8 @@
       "gakumei": "Foeniculum vulgare",
       "kamoku": "セリ科",
       "bui": "果実",
-      "sihyouseibun": "アネトール"
+      "sihyouseibun": "アネトール",
+      "importance": "N"
     },
     "キジツ": {
       "syouyakumei": "キジツ",
@@ -562,7 +630,8 @@
       "gakumei": "Citrus aurantium",
       "kamoku": "ミカン科",
       "bui": "未熟な果実",
-      "sihyouseibun": "ヘスペリジン"
+      "sihyouseibun": "ヘスペリジン",
+      "importance": "N"
     },
     "ゴシュユ": {
       "syouyakumei": "ゴシュユ",
@@ -570,7 +639,8 @@
       "gakumei": "Euodia ruticarpa",
       "kamoku": "ミカン科",
       "bui": "果実",
-      "sihyouseibun": "エボジアミン"
+      "sihyouseibun": "エボジアミン",
+      "importance": "N"
     },
     "ゴミシ": {
       "syouyakumei": "ゴミシ",
@@ -578,7 +648,8 @@
       "gakumei": "Schisandra chinensis",
       "kamoku": "マツブサ科",
       "bui": "果実",
-      "sihyouseibun": "シザンドリン"
+      "sihyouseibun": "シザンドリン",
+      "importance": "N"
     },
     "サンシシ": {
       "syouyakumei": "サンシシ",
@@ -586,7 +657,8 @@
       "gakumei": "Garenia jasminoides",
       "kamoku": "アカネ科",
       "bui": "果実",
-      "sihyouseibun": "クロシン、ゲニポシド"
+      "sihyouseibun": "クロシン、ゲニポシド",
+      "importance": "Y"
     },
     "サンシュユ": {
       "syouyakumei": "サンシュユ",
@@ -594,7 +666,8 @@
       "gakumei": "Cornus officinalis",
       "kamoku": "ミズキ科",
       "bui": "偽果の果肉",
-      "sihyouseibun": "ロガニン"
+      "sihyouseibun": "ロガニン",
+      "importance": "N"
     },
     "サンショウ": {
       "syouyakumei": "サンショウ",
@@ -602,7 +675,8 @@
       "gakumei": "Zanthoxylum piperitum",
       "kamoku": "ミカン科",
       "bui": "成熟した果皮",
-      "sihyouseibun": "α-サンショオール"
+      "sihyouseibun": "α-サンショオール",
+      "importance": "N"
     },
     "タイソウ": {
       "syouyakumei": "タイソウ",
@@ -610,7 +684,8 @@
       "gakumei": "Ziziphus jujuba",
       "kamoku": "クロウメモドキ科",
       "bui": "果実",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "チンピ": {
       "syouyakumei": "チンピ",
@@ -618,7 +693,8 @@
       "gakumei": "Citrus unshiu",
       "kamoku": "ミカン科",
       "bui": "成熟した果皮を一年以上乾燥させたもの",
-      "sihyouseibun": "ヘスペリジン"
+      "sihyouseibun": "ヘスペリジン",
+      "importance": "Y"
     },
     "トウヒ": {
       "syouyakumei": "トウヒ",
@@ -626,7 +702,8 @@
       "gakumei": "Citrus aurantium",
       "kamoku": "ミカン科",
       "bui": "成熟した果皮",
-      "sihyouseibun": "ヘスペリジン、ナギンギン"
+      "sihyouseibun": "ヘスペリジン、ナギンギン",
+      "importance": "N"
     },
     "マシニン": {
       "syouyakumei": "マシニン",
@@ -634,7 +711,8 @@
       "gakumei": "Cannabis sativa",
       "kamoku": "クワ科",
       "bui": "果実",
-      "sihyouseibun": "脂肪油"
+      "sihyouseibun": "脂肪油",
+      "importance": "N"
     },
     "レンギョウ": {
       "syouyakumei": "レンギョウ",
@@ -642,7 +720,8 @@
       "gakumei": "Forsythia suspensa",
       "kamoku": "モクセイ科",
       "bui": "果実",
-      "sihyouseibun": "オレアノール酸"
+      "sihyouseibun": "オレアノール酸",
+      "importance": "N"
     }
   },
   "other": {
@@ -652,7 +731,8 @@
       "gakumei": "Geranium thunbergii",
       "kamoku": "フウロソウ科",
       "bui": "地上部",
-      "sihyouseibun": "ゲラニイン"
+      "sihyouseibun": "ゲラニイン",
+      "importance": "Y"
     },
     "ジュウヤク": {
       "syouyakumei": "ジュウヤク",
@@ -660,7 +740,8 @@
       "gakumei": "Houttuynia cordata",
       "kamoku": "ドクダミ科",
       "bui": "花期の地上部",
-      "sihyouseibun": "イソクエルシトリン"
+      "sihyouseibun": "イソクエルシトリン",
+      "importance": "Y"
     },
     "センブリ": {
       "syouyakumei": "センブリ",
@@ -668,7 +749,8 @@
       "gakumei": "Swertia japonica",
       "kamoku": "リンドウ科",
       "bui": "花期の全草",
-      "sihyouseibun": "スウェルチアマリン"
+      "sihyouseibun": "スウェルチアマリン",
+      "importance": "Y"
     },
     "ハッカ": {
       "syouyakumei": "ハッカ",
@@ -676,7 +758,8 @@
       "gakumei": "Mentha arvensis",
       "kamoku": "シソ科",
       "bui": "地上部",
-      "sihyouseibun": "(-)-メントール"
+      "sihyouseibun": "(-)-メントール",
+      "importance": "N"
     },
     "マオウ": {
       "syouyakumei": "マオウ",
@@ -684,7 +767,8 @@
       "gakumei": "Ephedra sinica",
       "kamoku": "マオウ科",
       "bui": "地上茎",
-      "sihyouseibun": "(-)-エフェドリン"
+      "sihyouseibun": "(-)-エフェドリン",
+      "importance": "Y"
     },
     "チョレイ": {
       "syouyakumei": "チョレイ",
@@ -692,7 +776,8 @@
       "gakumei": "Polyporus umbellatus",
       "kamoku": "サルノコシカケ科",
       "bui": "菌核",
-      "sihyouseibun": "エルゴステロール"
+      "sihyouseibun": "エルゴステロール",
+      "importance": "Y"
     },
     "バッカク": {
       "syouyakumei": "バッカク",
@@ -700,7 +785,8 @@
       "gakumei": "Secale cereale",
       "kamoku": "イネ科",
       "bui": "菌核",
-      "sihyouseibun": "エルゴメトリン"
+      "sihyouseibun": "エルゴメトリン",
+      "importance": "N"
     },
     "ブクリョウ": {
       "syouyakumei": "ブクリョウ",
@@ -708,7 +794,8 @@
       "gakumei": "Wolfiporia cocos",
       "kamoku": "サルノコシカケ科",
       "bui": "菌核",
-      "sihyouseibun": "エルゴステロール"
+      "sihyouseibun": "エルゴステロール",
+      "importance": "Y"
     },
     "コウイ": {
       "syouyakumei": "コウイ",
@@ -716,7 +803,8 @@
       "gakumei": "なし",
       "kamoku": "なし",
       "bui": "得られたデンプンを糖化させた飴",
-      "sihyouseibun": "マルトース"
+      "sihyouseibun": "マルトース",
+      "importance": "N"
     },
     "アセンヤク": {
       "syouyakumei": "アセンヤク",
@@ -724,7 +812,8 @@
       "gakumei": "Uncaria gambir ",
       "kamoku": "アカネ科",
       "bui": "葉および若枝から得た乾燥水性エキス",
-      "sihyouseibun": "カテキン類"
+      "sihyouseibun": "カテキン類",
+      "importance": "N"
     },
     "アヘン": {
       "syouyakumei": "アヘン",
@@ -732,7 +821,8 @@
       "gakumei": "Papaver somniferum",
       "kamoku": "ケシ科",
       "bui": "未熟果実から得られる乾燥乳液",
-      "sihyouseibun": "モルヒネ"
+      "sihyouseibun": "モルヒネ",
+      "importance": "Y"
     },
     "アロエ": {
       "syouyakumei": "アロエ",
@@ -740,7 +830,8 @@
       "gakumei": "Aloe ferox",
       "kamoku": "ユリ科",
       "bui": "葉の液汁を乾燥させたもの",
-      "sihyouseibun": "バルバロイン"
+      "sihyouseibun": "バルバロイン",
+      "importance": "N"
     },
     "ゴオウ": {
       "syouyakumei": "ゴオウ",
@@ -748,7 +839,8 @@
       "gakumei": "Bos taurus",
       "kamoku": "ウシ科",
       "bui": "ウシの胆嚢に生じた結石",
-      "sihyouseibun": "胆汁酸、ビリルビン"
+      "sihyouseibun": "胆汁酸、ビリルビン",
+      "importance": "Y"
     },
     "センソ": {
       "syouyakumei": "センソ",
@@ -756,7 +848,8 @@
       "gakumei": "Bufo bufo gargarizans",
       "kamoku": "ヒキガエル科",
       "bui": "毒腺分泌物",
-      "sihyouseibun": "レシブフォゲニン"
+      "sihyouseibun": "レシブフォゲニン",
+      "importance": "Y"
     },
     "ボレイ": {
       "syouyakumei": "ボレイ",
@@ -764,7 +857,8 @@
       "gakumei": "Ostrea gigas",
       "kamoku": "イタボガキ科",
       "bui": "貝殻",
-      "sihyouseibun": "炭酸カルシウム"
+      "sihyouseibun": "炭酸カルシウム",
+      "importance": "Y"
     },
     "ユウタン": {
       "syouyakumei": "ユウタン",
@@ -772,7 +866,8 @@
       "gakumei": "Ursus arctos",
       "kamoku": "クマ科",
       "bui": "胆嚢、胆汁乾燥物",
-      "sihyouseibun": "ウルソデオキシコール酸"
+      "sihyouseibun": "ウルソデオキシコール酸",
+      "importance": "Y"
     },
     "カッセキ": {
       "syouyakumei": "カッセキ",
@@ -780,7 +875,8 @@
       "gakumei": "なし",
       "kamoku": "なし",
       "bui": "なし",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "セッコウ": {
       "syouyakumei": "セッコウ",
@@ -788,7 +884,8 @@
       "gakumei": "なし",
       "kamoku": "なし",
       "bui": "なし",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "Y"
     },
     "ボウショウ": {
       "syouyakumei": "ボウショウ",
@@ -796,7 +893,8 @@
       "gakumei": "なし",
       "kamoku": "なし",
       "bui": "なし",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     },
     "リュウコツ": {
       "syouyakumei": "リュウコツ",
@@ -804,7 +902,8 @@
       "gakumei": "なし",
       "kamoku": "なし",
       "bui": "なし",
-      "sihyouseibun": "なし"
+      "sihyouseibun": "なし",
+      "importance": "N"
     }
   }
 }
@@ -833,6 +932,11 @@
   function SetMode(target){
     mode = target;
     console.log(mode);
+  }
+
+  function SwitchImportance(){
+    importance = !importance;
+    console.log("importance:",importance)
   }
 
   function StartGame(){
@@ -886,6 +990,11 @@ function MakeList(){
     if(Range_of_question[key] == true){
       Object.assign(Qlist,data[key])
     } 
+  }
+  for(key in Qlist){
+    if(Qlist[key]["importance"] != "Y"){
+      delete Qlist[key]
+    }
   }
   console.log("Qlist:",Qlist)
   console.log("length:",Object.keys(Qlist).length)
