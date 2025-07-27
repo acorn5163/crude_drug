@@ -1,7 +1,7 @@
   var Range_of_question = {"ne":true,"konkei":true,"ha":true,"kawa":true,"kazitu":true,"syusi":true,"other":true};
   var Hints = {"syouyakumei":true,"kigen":true,"sihyouseibun":true,"gakumei":true,"kamoku":true,"bui":true,"kounou":true};
   var type_of_answer = "syouyakumei"
-  const ToA = {"syouyakumei":"生薬名","kigen":"基原","sihyouseibun":"指標成分","gakumei":"学名","kamoku":"科目","bui":"部位"};
+  const ToA = {"syouyakumei":"生薬名","kigen":"基原","sihyouseibun":"指標成分","gakumei":"学名","kamoku":"科目","bui":"部位","kounou":"効能"};
   var number_of_Q = 10
   var modedict = {"type":"answercontainer","choose":"choosecontainer"}
   var importance = false
