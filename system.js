@@ -1,5 +1,5 @@
   var Range_of_question = {"ne":true,"konkei":true,"ha":true,"kawa":true,"kazitu":true,"syusi":true,"other":true};
-  var Hints = {"syouyakumei":true,"kigen":true,"sihyouseibun":true,"gakumei":true,"kamoku":true,"bui":true};
+  var Hints = {"syouyakumei":true,"kigen":true,"sihyouseibun":true,"gakumei":true,"kamoku":true,"bui":true,"kounou":true};
   var type_of_answer = "syouyakumei"
   const ToA = {"syouyakumei":"生薬名","kigen":"基原","sihyouseibun":"指標成分","gakumei":"学名","kamoku":"科目","bui":"部位"};
   var number_of_Q = 10
@@ -15,7 +15,8 @@
       "kamoku": "ミカン科",
       "bui": "周皮を除いた樹皮",
       "sihyouseibun": "ベルベリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "清熱薬、ベルベリン塩化物水和物、苦味健胃薬、止瀉薬、消炎薬"
     },
     "ケイヒ": {
       "syouyakumei": "ケイヒ",
@@ -24,7 +25,8 @@
       "kamoku": "クスノキ科",
       "bui": "樹皮",
       "sihyouseibun": "シンナムアルデヒド",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "辛温解表薬、温裏薬、芳香性健胃薬、糖尿病改善薬"
     },
     "コウボク": {
       "syouyakumei": "コウボク",
@@ -33,7 +35,8 @@
       "kamoku": "モクレン科",
       "bui": "樹皮",
       "sihyouseibun": "マグノクラリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "理気薬、芳香性健胃薬"
     },
     "トチュウ": {
       "syouyakumei": "トチュウ",
@@ -42,7 +45,8 @@
       "kamoku": "トチュウ科",
       "bui": "樹皮",
       "sihyouseibun": "グッタペルカ",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "補陽薬、薬用酒の原料"
     },
     "ボタンピ": {
       "syouyakumei": "ボタンピ",
@@ -51,7 +55,8 @@
       "kamoku": "ボタン科",
       "bui": "根皮",
       "sihyouseibun": "ぺオノール",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "活血化瘀薬"
     }
   },
   "konkei": {
@@ -62,7 +67,8 @@
       "kamoku": "アカネ科",
       "bui": "とげのついた茎",
       "sihyouseibun": "リンコフィリン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "平肝熄風薬、鎮痛薬、鎮痙薬"
     },
     "ボウイ": {
       "syouyakumei": "ボウイ",
@@ -71,7 +77,8 @@
       "kamoku": "ツヅラフジ科",
       "bui": "つる性の茎および根茎",
       "sihyouseibun": "シノメニン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "祛湿薬"
     },
     "モクツウ": {
       "syouyakumei": "モクツウ",
@@ -80,7 +87,8 @@
       "kamoku": "アケビ科",
       "bui": "つる性の茎",
       "sihyouseibun": "アケビオシド",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "祛湿薬"
     },
     "オウレン": {
       "syouyakumei": "オウレン",
@@ -89,7 +97,8 @@
       "kamoku": "キンポウゲ科",
       "bui": "根を除いた根茎",
       "sihyouseibun": "ベルベリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "清熱薬"
     },
     "ガジュツ": {
       "syouyakumei": "ガジュツ",
@@ -98,7 +107,8 @@
       "kamoku": "ショウガ科",
       "bui": "根茎を湯通しして乾燥したもの",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "活血薬、芳香健胃薬"
     },
     "コウブシ": {
       "syouyakumei": "コウブシ",
@@ -107,7 +117,8 @@
       "kamoku": "カヤツリウサ科",
       "bui": "根茎",
       "sihyouseibun": "αシペロン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "理気薬"
     },
     "サンヤク": {
       "syouyakumei": "サンヤク",
@@ -116,7 +127,8 @@
       "kamoku": "ヤマノイモ科",
       "bui": "根茎",
       "sihyouseibun": "ジオスシン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補気薬"
     },
     "ショウキョウ": {
       "syouyakumei": "ショウキョウ",
@@ -125,7 +137,8 @@
       "kamoku": "ショウガ科",
       "bui": "根茎",
       "sihyouseibun": "[6]-ギンゲロール",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "辛温解表薬（ショウキョウ）　　　　　　　　　　　　　温裏薬（カンキョウ）、矯味薬、かぜ薬"
     },
     "ショウマ": {
       "syouyakumei": "ショウマ",
@@ -134,7 +147,8 @@
       "kamoku": "キンポウゲ科",
       "bui": "根茎",
       "sihyouseibun": "シミゲノール",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "辛涼解表薬、清熱薬"
     },
     "センキュウ": {
       "syouyakumei": "センキュウ",
@@ -143,7 +157,8 @@
       "kamoku": "セリ科",
       "bui": "根茎、通例湯通ししたもの",
       "sihyouseibun": "リグスチリド",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "活血化瘀薬"
     },
     "ソウジュツ": {
       "syouyakumei": "ソウジュツ",
@@ -152,7 +167,8 @@
       "kamoku": "キク科",
       "bui": "根茎",
       "sihyouseibun": "ヒネソール、β-オイデスモール",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "祛湿薬"
     },
     "ダイオウ": {
       "syouyakumei": "ダイオウ",
@@ -161,7 +177,8 @@
       "kamoku": "タデ科",
       "bui": "根茎",
       "sihyouseibun": "センノシドA",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "瀉下薬、活血化瘀薬、瀉下薬"
     },
     "タクシャ": {
       "syouyakumei": "タクシャ",
@@ -170,7 +187,8 @@
       "kamoku": "オモダカ科",
       "bui": "塊茎",
       "sihyouseibun": "アリソールA",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "祛湿薬"
     },
     "チクセツニンジン": {
       "syouyakumei": "チクセツニンジン",
@@ -179,7 +197,8 @@
       "kamoku": "ウコギ科",
       "bui": "根茎、湯通ししたもの",
       "sihyouseibun": "チクセツサポニンⅣ",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "補気薬"
     },
     "チモ": {
       "syouyakumei": "チモ",
@@ -188,7 +207,8 @@
       "kamoku": "ユリ科",
       "bui": "根茎",
       "sihyouseibun": "チモサポニンAⅠ",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "清熱瀉下薬"
     },
     "ハンゲ": {
       "syouyakumei": "ハンゲ",
@@ -197,7 +217,8 @@
       "kamoku": "サトイモ科",
       "bui": "周皮を除いた球茎",
       "sihyouseibun": "ホモゲンチジン酸",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "化痰薬"
     },
     "ビャクジュツ": {
       "syouyakumei": "ビャクジュツ",
@@ -206,7 +227,8 @@
       "kamoku": "キク科",
       "bui": "根茎",
       "sihyouseibun": "アトラクチロン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補気薬"
     },
     "ロートコン": {
       "syouyakumei": "ロートコン",
@@ -215,7 +237,8 @@
       "kamoku": "ナス科",
       "bui": "根茎および根",
       "sihyouseibun": "l-ヒヨスチアミン、スコポラミン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "鎮痛薬、鎮痙薬"
     },
     "サイシン": {
       "syouyakumei": "サイシン",
@@ -224,7 +247,8 @@
       "kamoku": "ウマノスズグサ科",
       "bui": "根および根茎",
       "sihyouseibun": "なし",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "温裏薬"
     },
     "トコン": {
       "syouyakumei": "トコン",
@@ -233,7 +257,8 @@
       "kamoku": "アカネ科",
       "bui": "根および根茎",
       "sihyouseibun": "エメチン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "催吐薬、トコンシロップの原料"
     },
     "ボウフウ": {
       "syouyakumei": "ボウフウ",
@@ -242,7 +267,8 @@
       "kamoku": "セリ科",
       "bui": "根および根茎",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "辛温解表薬"
     },
     "リュウタン": {
       "syouyakumei": "リュウタン",
@@ -251,7 +277,8 @@
       "kamoku": "リンドウ科",
       "bui": "根および根茎",
       "sihyouseibun": "ゲンチオピクロシド",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "清熱薬、苦味健胃薬、苦味健胃薬"
     },
     "カンキョウ": {
       "syouyakumei": "カンキョウ",
@@ -260,7 +287,8 @@
       "kamoku": "ショウガ科",
       "bui": "湯通しまたは蒸してから乾燥",
       "sihyouseibun": "[6]-ショウガオール",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "温裏薬、矯味薬、かぜ薬"
     }
   },
   "ne": {
@@ -271,7 +299,8 @@
       "kamoku": "マメ科",
       "bui": "根",
       "sihyouseibun": "アストラガロシドⅣ",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補気薬、滋養強壮薬"
     },
     "オウゴン": {
       "syouyakumei": "オウゴン",
@@ -280,7 +309,8 @@
       "kamoku": "シソ科",
       "bui": "周皮を除いた根",
       "sihyouseibun": "バイカリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "清熱薬"
     },
     "オンジ": {
       "syouyakumei": "オンジ",
@@ -289,7 +319,8 @@
       "kamoku": "ヒメハギ科",
       "bui": "根",
       "sihyouseibun": "オンジサポニン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "安神薬、去痰薬、物忘れの改善"
     },
     "カッコン": {
       "syouyakumei": "カッコン",
@@ -298,7 +329,8 @@
       "kamoku": "マメ科",
       "bui": "根",
       "sihyouseibun": "プエラリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "辛涼解表薬"
     },
     "カンゾウ　　　　　　　　シャカンゾウ": {
       "syouyakumei": "カンゾウ　　　　　　　　シャカンゾウ",
@@ -307,7 +339,8 @@
       "kamoku": "マメ科",
       "bui": "根およびストロン",
       "sihyouseibun": "グリチルリチン酸",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補気薬、抗潰瘍薬、抗炎症薬、矯味薬"
     },
     "キキョウ": {
       "syouyakumei": "キキョウ",
@@ -316,7 +349,8 @@
       "kamoku": "キキョウ科",
       "bui": "根",
       "sihyouseibun": "プラチコディンD",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "止咳平喘薬、去痰薬"
     },
     "サイコ": {
       "syouyakumei": "サイコ",
@@ -325,7 +359,8 @@
       "kamoku": "セリ科",
       "bui": "根",
       "sihyouseibun": "サイコサポニンa",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "辛涼解表薬"
     },
     "サイシン": {
       "syouyakumei": "サイシン",
@@ -334,7 +369,8 @@
       "kamoku": "ウマノスズグサ科",
       "bui": "根および根茎",
       "sihyouseibun": "メチルオイゲノール",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "温裏薬"
     },
     "ジオウ": {
       "syouyakumei": "ジオウ",
@@ -343,7 +379,8 @@
       "kamoku": "ゴマノハグサ科",
       "bui": "根もしくは根を蒸して乾燥したもの",
       "sihyouseibun": "スタキオースもしくはマンニノトリオース",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補陰薬（乾ジオウ）　　　　　　補血薬（熟ジオウ）"
     },
     "シコン": {
       "syouyakumei": "シコン",
@@ -352,7 +389,8 @@
       "kamoku": "ムラサキ科",
       "bui": "根",
       "sihyouseibun": "シコニン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "清熱薬"
     },
     "シャクヤク": {
       "syouyakumei": "シャクヤク",
@@ -361,7 +399,8 @@
       "kamoku": "ボタン科",
       "bui": "根",
       "sihyouseibun": "ぺオニフロリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補血薬、婦人病薬"
     },
     "セネガ": {
       "syouyakumei": "セネガ",
@@ -370,7 +409,8 @@
       "kamoku": "ヒメハギ科",
       "bui": "根",
       "sihyouseibun": "セネギンⅡ",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "去痰薬"
     },
     "トウキ": {
       "syouyakumei": "トウキ",
@@ -379,7 +419,8 @@
       "kamoku": "セリ科",
       "bui": "根",
       "sihyouseibun": "リグスチリド",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補血薬、婦人病薬"
     },
     "トコン": {
       "syouyakumei": "トコン",
@@ -388,7 +429,8 @@
       "kamoku": "アカネ科",
       "bui": "根および根茎",
       "sihyouseibun": "エメチン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "催吐薬、トコンシロップの原料"
     },
     "ニンジン": {
       "syouyakumei": "ニンジン",
@@ -397,7 +439,8 @@
       "kamoku": "ウコギ科",
       "bui": "根",
       "sihyouseibun": "ギンセノシド",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "補気薬（ニンジン）、滋養強壮薬"
     },
     "バクモンドウ": {
       "syouyakumei": "バクモンドウ",
@@ -406,7 +449,8 @@
       "kamoku": "ユリ科",
       "bui": "根の肥大部",
       "sihyouseibun": "オフィオポゴニンB",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "補陰薬、鎮咳薬"
     },
     "ブシ": {
       "syouyakumei": "ブシ",
@@ -415,7 +459,8 @@
       "kamoku": "キンポウゲ科",
       "bui": "塊根",
       "sihyouseibun": "ベンゾイルメサコニン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "温裏薬、補陽薬、鎮痛薬、強心薬、利尿薬"
     },
     "ボウフウ": {
       "syouyakumei": "ボウフウ",
@@ -424,7 +469,8 @@
       "kamoku": "セリ科",
       "bui": "根および根茎",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "辛温解表薬"
     },
     "リュウタン": {
       "syouyakumei": "リュウタン",
@@ -433,7 +479,8 @@
       "kamoku": "リンドウ科",
       "bui": "根および根茎",
       "sihyouseibun": "ゲンチオピクロシド",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "清熱薬、苦味健胃薬、苦味健胃薬"
     },
     "ウコン": {
       "syouyakumei": "ウコン",
@@ -442,7 +489,8 @@
       "kamoku": "ショウガ科",
       "bui": "根茎を湯通ししたもの",
       "sihyouseibun": "クルクミン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "活血薬、利胆薬、鎮痛薬、止血薬"
     },
     "ロートコン": {
       "syouyakumei": "ロートコン",
@@ -451,7 +499,8 @@
       "kamoku": "ナス科",
       "bui": "根茎および根",
       "sihyouseibun": "l-ヒヨスチアミン、スコポラミン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "鎮痛薬、鎮痙薬"
     },
     "コウジン": {
       "syouyakumei": "コウジン",
@@ -460,7 +509,8 @@
       "kamoku": "ウコギ科",
       "bui": "根(蒸してから乾燥させたもの)",
       "sihyouseibun": "ギンセノシド",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "滋養強壮薬"
     }
   },
   "kuki": {},
@@ -472,7 +522,8 @@
       "kamoku": "キク科",
       "bui": "頭花",
       "sihyouseibun": "スコパロン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "利水滲湿薬、清熱薬"
     },
     "カイカ": {
       "syouyakumei": "カイカ",
@@ -481,7 +532,8 @@
       "kamoku": "マメ科",
       "bui": "つぼみ",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": ""
     },
     "コウカ": {
       "syouyakumei": "コウカ",
@@ -490,7 +542,8 @@
       "kamoku": "キク科",
       "bui": "花",
       "sihyouseibun": "サフラミンA、カルタミン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "活血化瘀薬"
     },
     "サフラン": {
       "syouyakumei": "サフラン",
@@ -499,7 +552,8 @@
       "kamoku": "アヤメ科",
       "bui": "柱頭",
       "sihyouseibun": "クロシン、クロセチン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "活血化瘀薬、鎮咳薬、鎮痙薬"
     },
     "チョウジ": {
       "syouyakumei": "チョウジ",
@@ -508,7 +562,8 @@
       "kamoku": "フトモモ科",
       "bui": "つぼみ",
       "sihyouseibun": "オイゲノール",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "温裏薬、芳香性健胃薬"
     }
   },
   "ha": {
@@ -519,7 +574,8 @@
       "kamoku": "ゴマノハグサ科",
       "bui": "葉",
       "sihyouseibun": "ジギトキシン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "強心薬"
     },
     "センナ": {
       "syouyakumei": "センナ",
@@ -528,7 +584,8 @@
       "kamoku": "マメ科",
       "bui": "小葉",
       "sihyouseibun": "センノシドA",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "瀉下薬"
     },
     "ソヨウ": {
       "syouyakumei": "ソヨウ",
@@ -537,7 +594,8 @@
       "kamoku": "シソ科",
       "bui": "葉および枝先",
       "sihyouseibun": "(-)-ぺリルアルデヒド",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "辛温解表薬、魚毒に対して"
     }
   },
   "syusi": {
@@ -548,7 +606,8 @@
       "kamoku": "バラ科",
       "bui": "種子",
       "sihyouseibun": "アミグダリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "止咳平喘薬、緩下薬、去痰薬"
     },
     "ケツメイシ": {
       "syouyakumei": "ケツメイシ",
@@ -557,7 +616,8 @@
       "kamoku": "マメ科",
       "bui": "種子",
       "sihyouseibun": "アウランチオオブツシン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "緩下薬"
     },
     "コウベイ": {
       "syouyakumei": "コウベイ",
@@ -566,7 +626,8 @@
       "kamoku": "イネ科",
       "bui": "種子",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "補気薬"
     },
     "サンソウニン": {
       "syouyakumei": "サンソウニン",
@@ -575,7 +636,8 @@
       "kamoku": "クロウメモドキ科",
       "bui": "種子",
       "sihyouseibun": "スピノシン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "安神薬"
     },
     "シャゼンシ": {
       "syouyakumei": "シャゼンシ",
@@ -584,7 +646,8 @@
       "kamoku": "オオバコ科",
       "bui": "種子",
       "sihyouseibun": "プランタサン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "利水滲湿薬"
     },
     "トウニン": {
       "syouyakumei": "トウニン",
@@ -593,7 +656,8 @@
       "kamoku": "バラ科",
       "bui": "種子",
       "sihyouseibun": "アミグダリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "活血化瘀薬、緩下薬"
     },
     "ホミカ": {
       "syouyakumei": "ホミカ",
@@ -602,7 +666,8 @@
       "kamoku": "マチン科",
       "bui": "種子",
       "sihyouseibun": "ストリキニーネ、ブルシン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "苦味健胃薬"
     },
     "ヨクイニン": {
       "syouyakumei": "ヨクイニン",
@@ -611,7 +676,8 @@
       "kamoku": "イネ科",
       "bui": "種皮を除いた種子",
       "sihyouseibun": "なし",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "祛湿薬、いぼ取り"
     }
   },
   "kazitu": {
@@ -622,7 +688,8 @@
       "kamoku": "セリ科",
       "bui": "果実",
       "sihyouseibun": "アネトール",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "温裏薬、芳香性健胃薬"
     },
     "キジツ": {
       "syouyakumei": "キジツ",
@@ -631,7 +698,8 @@
       "kamoku": "ミカン科",
       "bui": "未熟な果実",
       "sihyouseibun": "ヘスペリジン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "理気薬、ダイエット用"
     },
     "ゴシュユ": {
       "syouyakumei": "ゴシュユ",
@@ -640,7 +708,8 @@
       "kamoku": "ミカン科",
       "bui": "果実",
       "sihyouseibun": "エボジアミン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "温裏薬"
     },
     "ゴミシ": {
       "syouyakumei": "ゴミシ",
@@ -649,7 +718,8 @@
       "kamoku": "マツブサ科",
       "bui": "果実",
       "sihyouseibun": "シザンドリン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "固渋薬"
     },
     "サンシシ": {
       "syouyakumei": "サンシシ",
@@ -658,7 +728,8 @@
       "kamoku": "アカネ科",
       "bui": "果実",
       "sihyouseibun": "クロシン、ゲニポシド",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "清熱薬"
     },
     "サンシュユ": {
       "syouyakumei": "サンシュユ",
@@ -667,7 +738,8 @@
       "kamoku": "ミズキ科",
       "bui": "偽果の果肉",
       "sihyouseibun": "ロガニン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "補陰薬"
     },
     "サンショウ": {
       "syouyakumei": "サンショウ",
@@ -676,7 +748,8 @@
       "kamoku": "ミカン科",
       "bui": "成熟した果皮",
       "sihyouseibun": "α-サンショオール",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "温裏薬、苦味健胃薬"
     },
     "タイソウ": {
       "syouyakumei": "タイソウ",
@@ -685,7 +758,8 @@
       "kamoku": "クロウメモドキ科",
       "bui": "果実",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "補気薬"
     },
     "チンピ": {
       "syouyakumei": "チンピ",
@@ -694,7 +768,8 @@
       "kamoku": "ミカン科",
       "bui": "成熟した果皮を一年以上乾燥させたもの",
       "sihyouseibun": "ヘスペリジン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "理気薬"
     },
     "トウヒ": {
       "syouyakumei": "トウヒ",
@@ -703,7 +778,8 @@
       "kamoku": "ミカン科",
       "bui": "成熟した果皮",
       "sihyouseibun": "ヘスペリジン、ナギンギン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "芳香苦味健胃薬"
     },
     "マシニン": {
       "syouyakumei": "マシニン",
@@ -712,7 +788,8 @@
       "kamoku": "クワ科",
       "bui": "果実",
       "sihyouseibun": "脂肪油",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "緩下薬"
     },
     "レンギョウ": {
       "syouyakumei": "レンギョウ",
@@ -721,7 +798,8 @@
       "kamoku": "モクセイ科",
       "bui": "果実",
       "sihyouseibun": "オレアノール酸",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "清熱薬"
     }
   },
   "other": {
@@ -732,7 +810,8 @@
       "kamoku": "フウロソウ科",
       "bui": "地上部",
       "sihyouseibun": "ゲラニイン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "止瀉薬"
     },
     "ジュウヤク": {
       "syouyakumei": "ジュウヤク",
@@ -741,7 +820,8 @@
       "kamoku": "ドクダミ科",
       "bui": "花期の地上部",
       "sihyouseibun": "イソクエルシトリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "緩下薬、利尿薬、毒下し"
     },
     "センブリ": {
       "syouyakumei": "センブリ",
@@ -750,7 +830,8 @@
       "kamoku": "リンドウ科",
       "bui": "花期の全草",
       "sihyouseibun": "スウェルチアマリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "（苦味）健胃薬"
     },
     "ハッカ": {
       "syouyakumei": "ハッカ",
@@ -759,7 +840,8 @@
       "kamoku": "シソ科",
       "bui": "地上部",
       "sihyouseibun": "(-)-メントール",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "辛涼解表薬、ハッカ油の原料"
     },
     "マオウ": {
       "syouyakumei": "マオウ",
@@ -768,7 +850,8 @@
       "kamoku": "マオウ科",
       "bui": "地上茎",
       "sihyouseibun": "(-)-エフェドリン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "辛温解表薬、エフェドリン塩酸塩製造原料"
     },
     "チョレイ": {
       "syouyakumei": "チョレイ",
@@ -777,7 +860,8 @@
       "kamoku": "サルノコシカケ科",
       "bui": "菌核",
       "sihyouseibun": "エルゴステロール",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "祛湿薬"
     },
     "バッカク": {
       "syouyakumei": "バッカク",
@@ -786,7 +870,8 @@
       "kamoku": "イネ科",
       "bui": "菌核",
       "sihyouseibun": "エルゴメトリン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": ""
     },
     "ブクリョウ": {
       "syouyakumei": "ブクリョウ",
@@ -795,7 +880,8 @@
       "kamoku": "サルノコシカケ科",
       "bui": "菌核",
       "sihyouseibun": "エルゴステロール",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "祛湿薬"
     },
     "コウイ": {
       "syouyakumei": "コウイ",
@@ -804,7 +890,8 @@
       "kamoku": "なし",
       "bui": "得られたデンプンを糖化させた飴",
       "sihyouseibun": "マルトース",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "補気薬"
     },
     "アセンヤク": {
       "syouyakumei": "アセンヤク",
@@ -813,7 +900,8 @@
       "kamoku": "アカネ科",
       "bui": "葉および若枝から得た乾燥水性エキス",
       "sihyouseibun": "カテキン類",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "止瀉薬、口中清涼剤原料"
     },
     "アヘン": {
       "syouyakumei": "アヘン",
@@ -822,7 +910,8 @@
       "kamoku": "ケシ科",
       "bui": "未熟果実から得られる乾燥乳液",
       "sihyouseibun": "モルヒネ",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "麻薬製鎮痛薬、鎮咳薬、鎮痙薬"
     },
     "アロエ": {
       "syouyakumei": "アロエ",
@@ -831,7 +920,8 @@
       "kamoku": "ユリ科",
       "bui": "葉の液汁を乾燥させたもの",
       "sihyouseibun": "バルバロイン",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "瀉下薬"
     },
     "ゴオウ": {
       "syouyakumei": "ゴオウ",
@@ -840,7 +930,8 @@
       "kamoku": "ウシ科",
       "bui": "ウシの胆嚢に生じた結石",
       "sihyouseibun": "胆汁酸、ビリルビン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "解熱薬、鎮痙薬、強心薬"
     },
     "センソ": {
       "syouyakumei": "センソ",
@@ -849,7 +940,8 @@
       "kamoku": "ヒキガエル科",
       "bui": "毒腺分泌物",
       "sihyouseibun": "レシブフォゲニン",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "強心薬"
     },
     "ボレイ": {
       "syouyakumei": "ボレイ",
@@ -858,7 +950,8 @@
       "kamoku": "イタボガキ科",
       "bui": "貝殻",
       "sihyouseibun": "炭酸カルシウム",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "平肝熄風薬、安神薬"
     },
     "ユウタン": {
       "syouyakumei": "ユウタン",
@@ -867,7 +960,8 @@
       "kamoku": "クマ科",
       "bui": "胆嚢、胆汁乾燥物",
       "sihyouseibun": "ウルソデオキシコール酸",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "利胆薬、鎮痙薬、強心薬"
     },
     "カッセキ": {
       "syouyakumei": "カッセキ",
@@ -876,7 +970,8 @@
       "kamoku": "なし",
       "bui": "なし",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "利水滲湿薬、清熱薬"
     },
     "セッコウ": {
       "syouyakumei": "セッコウ",
@@ -885,7 +980,8 @@
       "kamoku": "なし",
       "bui": "なし",
       "sihyouseibun": "なし",
-      "importance": "Y"
+      "importance": "Y",
+      "kounou": "清熱薬"
     },
     "ボウショウ": {
       "syouyakumei": "ボウショウ",
@@ -894,7 +990,8 @@
       "kamoku": "なし",
       "bui": "なし",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "瀉下薬"
     },
     "リュウコツ": {
       "syouyakumei": "リュウコツ",
@@ -903,7 +1000,8 @@
       "kamoku": "なし",
       "bui": "なし",
       "sihyouseibun": "なし",
-      "importance": "N"
+      "importance": "N",
+      "kounou": "安神薬"
     }
   }
 }
@@ -1009,6 +1107,7 @@ function SetQuestion(Qdata){
   document.getElementById("C_kamoku").textContent = Qdata["kamoku"];
   document.getElementById("C_bui").textContent = Qdata["bui"];
   document.getElementById("C_sihyouseibun").textContent = Qdata["sihyouseibun"];
+  document.getElementById("C_kounou").textContent = Qdata["kounou"];
   if(mode=="type"){
     document.getElementById("C_answer").textContent = Qdata["Answer"];
   }

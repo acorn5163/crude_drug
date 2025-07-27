@@ -49,6 +49,8 @@
       <label class="btn btn-outline-primary" for = "gakumei" onclick="ChangeHint('gakumei')">学名</label><br>
       <input type="checkbox" class="btn-check" id="kamoku" autocomplete="off" checked>
       <label class="btn btn-outline-primary" for = "kamoku" onclick="ChangeHint('kamoku')">科目</label><br>
+      <input type="checkbox" class="btn-check" id="kounou" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for = "kounou" onclick="ChangeHint('kounou')">効能</label><br>
     </div>
   </div>
 
@@ -67,6 +69,8 @@
       <label class="btn btn-outline-primary" for = "A_gakumei" onclick="ChangeTarget('gakumei')">学名</label>
       <input type="radio" class="btn-check" id="A_kamoku" autocomplete="off" name = "type_of_answer">
       <label class="btn btn-outline-primary" for = "A_kamoku" onclick="ChangeTarget('kamoku')">科目</label>
+      <input type="radio" class="btn-check" id="A_kounou" autocomplete="off" name = "type_of_answer">
+      <label class="btn btn-outline-primary" for = "A_kounou" onclick="ChangeTarget('kounou')">効能</label>
     </div>
   </div>
 
@@ -106,19 +110,11 @@
 <div id="page_question" class="d-none">
   <div class="container mt-5">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-12">
         <div class="card">
           <div class = "card-body">
-            <h3 class = "card-title">生薬名</h3>
+            <h4 class = "card-title">生薬名</h4>
             <p class = "card-text" id="C_syouyakumei"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class = "card-body">
-            <h3 class = "card-title">基原</h3>
-            <p class = "card-text" id="C_kigen"></p>
           </div>
         </div>
       </div>
@@ -127,7 +123,25 @@
       <div class="col-sm-6">
         <div class="card">
           <div class = "card-body">
-            <h3 class = "card-title">科目</h3>
+            <h4 class = "card-title">基原</h4>
+            <p class = "card-text" id="C_kigen"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class = "card-body">
+            <h4 class = "card-title">効能</h4>
+            <p class = "card-text" id="C_kounou"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class = "card-body">
+            <h4 class = "card-title">科目</h4>
             <p class = "card-text" id="C_kamoku"></p>
           </div>
         </div>
@@ -135,7 +149,7 @@
       <div class="col-sm-6">
         <div class="card">
           <div class = "card-body">
-            <h3 class = "card-title">部位</h3>
+            <h4 class = "card-title">部位</h4>
             <p class = "card-text" id="C_bui"></p>
           </div>
         </div>
@@ -145,7 +159,7 @@
       <div class="col-sm-6">
         <div class="card">
           <div class = "card-body">
-            <h3 class = "card-title">指標成分</h3>
+            <h4 class = "card-title">指標成分</h4>
             <p class = "card-text" id="C_sihyouseibun"></p>
           </div>
         </div>
@@ -153,7 +167,7 @@
       <div class="col-sm-6">
         <div class="card">
           <div class = "card-body">
-            <h3 class = "card-title">学名</h3>
+            <h4 class = "card-title">学名</h4>
             <p class = "card-text" id="C_gakumei"></p>
           </div>
         </div>
