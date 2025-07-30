@@ -137,7 +137,7 @@ function SetQuestion(Qdata){
   document.getElementById("answercontainer").classList.add("d-none");
   document.getElementById("choosecontainer").classList.add("d-none");
   document.getElementById(modedict[mode]).classList.remove("d-none");
-  document.getElementById("C_syouyakumei").scrollIntoView({  
+  document.getElementById("page_question").scrollIntoView({  
   behavior: 'smooth'  
 });
 }
